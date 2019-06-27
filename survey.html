@@ -1,0 +1,119 @@
+<!-- survey with drop down to pick #'s' -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder Survey</title>
+    <!-- favicon -->
+    <link rel="icon" href="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fboomerhealthinstitute.com%2Fwp-content%2Fuploads%2F2014%2F01%2Fbigstock-Symbol-of-friendship-Icon-Hap-25670831.jpg&f=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Survey Questions</h1>
+        <p class="lead">Fill out the following survey to find the right friend for you!</p>
+        <!-- <div>Please review your answers again for accuracy before submitting!</div> -->
+        <hr class="my-4">
+    </div>
+
+    <div class="col-12">
+
+        <div class="card">
+            <div class="card-header">
+                <form method="POST" role="form">
+                    <div class="form-group">
+                        <label for="userName">Name</label>
+                        <small id="nameHelp" class="form-text text-muted">Please enter your name</small>
+                        <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPicture">Link to your picture</label>
+                        <small id="pictureHelp" class="form-text text-muted">Please provide a link to your picture</small>
+                        <input type="picture" class="form-control" id="picture" aria-describedby="pictureHelp" placeholder="Link to your picture" required>
+                    </div>
+                    <!-- <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <hr>
+                    <h1><strong>Question 1</strong></h1>
+                    <h4>You like to explore the outdoors.</h4>
+                    <select class="form-control" id="q1">
+            <label for="question1"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    <h1><strong>Question 2</strong></h1>
+                    <h4>You get upset easily</h4>
+                    <select class="form-control" id="q2">
+            <label for="question2"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    <h1><strong>Question 3</strong></h1>
+                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <select class="form-control" id="q3">
+            <label for="question3"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+                    <h1><strong>Question 4</strong></h1>
+                    <h4>You are a pet person.</h4>
+                    <select class="form-control" id="q4">
+            <label for="question3"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+                    <h1><strong>Question 5</strong></h1>
+                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <select class="form-control" id="q5">
+            <label for="question3"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+                    <h1><strong>Question 6</strong></h1>
+                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <select class="form-control" id="q6">
+            <label for="question3"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+
+                    <br>
+                    <small id="submitHelp" class="form-text text-muted">Please review your answers again for accuracy before submitting!</small>
+                    <button type="submit" class="btn btn-block btn-primary" aria-describedby="submitHelp">Find my Friend!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
