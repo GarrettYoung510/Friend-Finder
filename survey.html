@@ -43,7 +43,7 @@
                     </div> -->
                     <hr>
                     <h1><strong>Question 1</strong></h1>
-                    <h4>You like to explore the outdoors.</h4>
+                    <h4>I worry about things</h4>
                     <select class="form-control" id="q1">
             <label for="question1"></label>
             <option value="1">1 (Strongly Agree)</option>
@@ -51,9 +51,9 @@
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (Strongly Disagree)</option>
-        </select>
+                    </select>
                     <h1><strong>Question 2</strong></h1>
-                    <h4>You get upset easily</h4>
+                    <h4>I love large parties</h4>
                     <select class="form-control" id="q2">
             <label for="question2"></label>
             <option value="1">1 (Strongly Agree)</option>
@@ -63,7 +63,7 @@
             <option value="5">5 (Strongly Disagree)</option>
         </select>
                     <h1><strong>Question 3</strong></h1>
-                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <h4>I have a vivid imagination</h4>
                     <select class="form-control" id="q3">
             <label for="question3"></label>
             <option value="1">1 (Strongly Agree)</option>
@@ -74,9 +74,9 @@
         </select>
                     </select>
                     <h1><strong>Question 4</strong></h1>
-                    <h4>You are a pet person.</h4>
+                    <h4>I panic easily</h4>
                     <select class="form-control" id="q4">
-            <label for="question3"></label>
+            <label for="question4"></label>
             <option value="1">1 (Strongly Agree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -85,9 +85,9 @@
         </select>
                     </select>
                     <h1><strong>Question 5</strong></h1>
-                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <h4>I dislike being the center of attention</h4>
                     <select class="form-control" id="q5">
-            <label for="question3"></label>
+            <label for="question5"></label>
             <option value="1">1 (Strongly Agree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -96,24 +96,77 @@
         </select>
                     </select>
                     <h1><strong>Question 6</strong></h1>
-                    <h4>You feel more energetic spending time with groups of people.</h4>
+                    <h4>I get irritated easily</h4>
                     <select class="form-control" id="q6">
-            <label for="question3"></label>
+            <label for="question6"></label>
             <option value="1">1 (Strongly Agree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (Strongly Disagree)</option>
         </select>
+                    </select>
+                    </select>
+                    <h1><strong>Question 7</strong></h1>
+                    <h4>I try to lead others</h4>
+                    <select class="form-control" id="q7">
+            <label for="question7"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+                    </select>
+                    <h1><strong>Question 8</strong></h1>
+                    <h4>I feel others' emotions</h4>
+                    <select class="form-control" id="q8">
+            <label for="question8"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+                    </select>
+                    <h1><strong>Question 9</strong></h1>
+                    <h4>I stick to the rules</h4>
+                    <select class="form-control" id="q9">
+            <label for="question9"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
+
+                    <h1><strong>Question 10</strong></h1>
+                    <h4>I am afraid of many things</h4>
+                    <select class="form-control" id="q10">
+            <label for="question9"></label>
+            <option value="1">1 (Strongly Agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Disagree)</option>
+        </select>
+                    </select>
 
                     <br>
                     <small id="submitHelp" class="form-text text-muted">Please review your answers again for accuracy before submitting!</small>
-                    <button type="submit" class="btn btn-block btn-primary" aria-describedby="submitHelp">Find my Friend!</button>
+                    <button type="submit" id="submit" class="btn btn-block btn-primary" aria-describedby="submitHelp">Find my Friend!</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <div class="modal-body">
+        <h2 id="match-name"></h2>
+        <img id="match-img" src="" alt="">
+    </div>
     <script>
         // Chosen CSS
         var config = {
@@ -162,8 +215,8 @@
             if (validateForm()) {
                 // Create an object for the user"s data
                 var userData = {
-                    name: $("#name").val(),
-                    photo: $("#photo").val(),
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
                     scores: [
                         $("#q1").val(),
                         $("#q2").val(),

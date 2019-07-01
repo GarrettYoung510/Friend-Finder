@@ -1,16 +1,15 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var path = require("path");
-// Dependencies
-var http = require("http");
-var fs = require("fs");
+const express = require("express");
+const path = require("path");
+const http = require("http");
+const fs = require("fs");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
+const app = express();
 // put process.env.PORT || port number or it will not work in heroku
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -19,27 +18,47 @@ app.use(express.json());
 
 // Friend (DATA)
 // =============================================================
-var characters = [{
-        routeName: "yoda",
-        name: "Yoda",
-        role: "Jedi Master",
-        age: 900,
-        forcePoints: 2000
+const friends = [{
+        name: "Mark",
+        photo: "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fs3.crackedcdn.com%2Fphpimages%2Farticle%2F2%2F4%2F6%2F450246_v1.jpg&f=1",
+        scores: ["4", "3", "4", "3", "5", "1", "5", "4", "3", "4", "5"]
     },
     {
-        routeName: "darthmaul",
-        name: "Darth Maul",
-        role: "Sith Lord",
-        age: 200,
-        forcePoints: 1200
+        routeName: "Chris",
+        name: "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fknownpeople.net%2Fwp-content%2Fuploads%2Fc%2Fchris-pratt-wallpaper.jpg&f=1",
+        scores: ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
     },
     {
-        routeName: "obiwankenobi",
-        name: "Obi Wan Kenobi",
-        role: "Jedi Master",
-        age: 55,
-        forcePoints: 1350
-    }
+        routeName: "Rihanna",
+        name: "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FdNcba3He2nY%2Fmaxresdefault.jpg&f=1",
+        scores: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+    },
+    {
+        routeName: "Donald",
+        name: "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1687,w_3000,x_0,y_256/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1554532592/GettyImages-599724318_tztq2y",
+        scores: ["1", "2", "3", "4", "5", "4", "3", "2", "1", "2", "3"]
+    },
+    {
+        routeName: "Drake",
+        name: "https://amp.businessinsider.com/images/56e34aad52bcd022008b5fa5-750-563.jpg",
+        scores: ["5", "4", "3", "2", "1", "2", "3", "4", "5", "4", "3"]
+    },
+    {
+        routeName: "Justin",
+        name: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv1ejVX08VKqZz9M5VyNKSIenPupcOukN8vnFDrMn9aXsS--mj",
+        scores: ["4", "3", "2", "1", "2", "3", "4", "3", "2", "1", "2"]
+    },
+    {
+        routeName: "Kim",
+        name: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/celebs-with-chronic-illnesses-1558558535.png?crop=0.487xw:0.974xh;0.513xw,0.0256xh&resize=640:*",
+        scores: ["3", "2", "1", "2", "3", "4", "5", "4", "3", "2", "1"]
+    },
+    {
+        routeName: "Selena",
+        name: "https://ca.hellomagazine.com/images/stories/0/2018/01/09/000/535/567/featured_5_3.jpg",
+        scores: ["2", "1", "2", "3", "4", "5", "4", "3", "2", "1", "1"]
+    },
+
 ];
 
 
