@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/GarrettYoung510/Friend-Finder#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "http": "0.0.0"
   }
 }
